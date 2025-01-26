@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           ftp-server: ${{ secrets.FTP_SERVER }}:${{ secrets.FTP_PORT }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
