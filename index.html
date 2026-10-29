@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 
 <head>
@@ -14,7 +14,7 @@
     crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
   <title>がきねこ(gakineko)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="gakineko|がきねこサイト">
@@ -24,41 +24,51 @@
 
 <body>
 
-  <div id="container">
-
-    <header>
-      <h1 id="logo"><a href="index.html"><img src="images/gakineko_logo.png" alt="GAKINEKO LOGO"></a></h1>
-      <aside id="mainimg"><img src="images/mainimg.jpg" alt=""></aside>
-    </header>
-
-    <nav id="menubar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-
-    <div id="contents">
-
-      <section id="new">
-        <h2>更新情報・お知らせ</h2>
-        <dl>
-          <dt>2010/01/01</dt>
-          <dd>公開しました</dd>
-        </dl>
-      </section>
-
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html"><img src="images/gakineko_lockup.png" alt="GAKINEKO LOGO"></a>
+      <nav>
+        <ul>
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </div>
-    <!--/contents-->
+  </header>
 
-    <footer>
-      <small>Copyright&copy; <a href="index.html">GAKINEKO</a> All Rights Reserved.</small>
-      <span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
-    </footer>
+  <section class="hero">
+    <div class="hero-box">
+      <div class="hero-text">
+        <h1>がきねこ</h1>
+        <p>Web開発・フリーエンジニア</p>
+      </div>
+    </div>
+  </section>
 
-  </div>
-  <!--/container-->
+  <main>
+    <h2 class="section-title">更新情報・お知らせ</h2>
+    <div class="news">
+      <div class="news-item">
+        <time datetime="2010-01-01">2010/01/01</time>
+        <span class="tag">NEWS</span>
+        <p>公開しました</p>
+      </div>
+    </div>
 
+    <section class="feed-section">
+      <h2 class="section-title">技術ニュース</h2>
+      <div class="feed-tabs" role="tablist" id="feed-tabs"></div>
+      <ul class="feed-list" id="feed-list" aria-live="polite"></ul>
+      <p class="feed-note">各サイトのRSSフィードより自動取得しています。</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2010–<span id="y"></span> GAKINEKO. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/feed.js"></script>
 </body>
 
 </html>
